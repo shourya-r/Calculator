@@ -32,7 +32,7 @@ function subtract(a,b){
 }
 
 function multiply(a,b){
-    let product = a-b;
+    let product = a*b;
     product = roundUp(product);
     return product;
 }
@@ -46,3 +46,21 @@ function divide(a,b){
 function modulus(a,b){
     return a%b;
 }
+
+// Operate function which takes in operator and two numbers and calls the 
+// appropriate function
+function operate(operator, num1, num2){
+    switch(operator){
+        case "+" : 
+            return add(num1,num2);
+        case "-" :
+            return subtract(num1,num2);
+        case "*" : 
+            return multiply(num1,num2);
+        case "/" : 
+            return divide(num1,num2);
+        case "%" : 
+            return modulus(num1,num2);
+    }
+}
+
