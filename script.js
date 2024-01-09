@@ -1,3 +1,7 @@
+// Global variables for what will be displayed on calculator display
+let num1; 
+let num2; 
+let operator;
 // Making a function for rounding up the answer of the calculator
 // Rounding upto 6 decimal places
 function roundUp(num){
