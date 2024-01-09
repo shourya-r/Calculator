@@ -7,11 +7,12 @@ body{
 }
 
 button{
-    height: 70px;
+    height: 75px;
     border-radius: 8px;
     border-style: solid;
-    border-width: 1.5px;
+    border-width: 2px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 /* CALCULATOR DIV */
@@ -25,11 +26,11 @@ button{
 /* DISPLAY */
 .display-div{
     background-color: #eeeeee;
-    padding: 13px;
+    padding: 10px;
     text-align: right;
     border-style: solid;
     border-radius: 10px;
-    border-width: 1.5px;
+    border-width: 2px;
 }
 
 .previous-term{
@@ -44,15 +45,27 @@ button{
 /* BUTTON GRID */
 .button-grid{
     display: grid;
-    grid-template-columns: 70px 70px 70px 70px;
-    margin-top: 15px;
-    row-gap: 15px;
-    column-gap: 15px;
+    grid-template-columns: 75px 75px 75px 75px;
+    margin-top: 17px;
+    row-gap: 12px;
+    column-gap: 12px;
 }
 
 .lower-buttons-grid{
     display: grid;
-    grid-template-columns: 70px 70px 1fr;
-    column-gap: 15px;
-    margin-top: 15px;
+    grid-template-columns: 75px 75px 1fr;
+    column-gap: 12px;
+    margin-top: 12px;
+}
+
+.clear-button{
+    background-color:#ffaaaa;
+}
+
+.delete-button{
+    background-color: #aaaaff;
+}
+
+.equals-button{
+    background-color: lightgreen;
 }
