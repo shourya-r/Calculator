@@ -13,3 +13,32 @@ function roundUp(num){
         return +num;
     }
 }
+
+// Function to add, subtract, multiply, divide and find modulus
+function add(a,b){
+    let sum = a+b;
+    sum = roundUp(sum);
+    return sum;
+}
+
+function subtract(a,b){
+    let difference = a-b; 
+    difference = roundUp(difference);
+    return difference;
+}
+
+function multiply(a,b){
+    let product = a-b;
+    product = roundUp(product);
+    return product;
+}
+
+function divide(a,b){
+    let quotient = a/b;
+    quotient = roundUp(quotient);
+    return quotient;
+}
+
+function modulus(a,b){
+    return a%b;
+}
