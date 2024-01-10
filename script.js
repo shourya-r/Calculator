@@ -110,3 +110,8 @@ numButtonArray.forEach(numButton =>{
 deleteButton.addEventListener('click', ()=>{
     currentTerm.textContent = removeLastLetter(currentTerm.textContent);
 });
+
+// Add an event listener to the clear button
+clearButton.addEventListener('click', ()=>{
+    currentTerm.textContent = "";
+});
