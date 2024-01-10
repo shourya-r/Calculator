@@ -85,6 +85,4 @@ const NINE = numButtonArray[8];
 const DECIMAL = numButtonArray[9];
 const ZERO  = numButtonArray[10];
 
-previousTerm.textContent = "8.3324 + ";
-currentTerm.textContent = "23455";
 
