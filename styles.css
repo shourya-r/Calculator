@@ -2,8 +2,6 @@
 
 body{
     font-family: Roboto;
-    display: flex;
-    justify-content: center;
 }
 
 button{
@@ -13,6 +11,11 @@ button{
     border-width: 2px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.main{
+    display: flex; 
+    justify-content: center;
 }
 
 /* CALCULATOR DIV */
@@ -68,4 +71,20 @@ button{
 
 .equals-button{
     background-color: lightgreen;
+}
+
+/* FOOTER */
+.footer{
+    text-align: center;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+.github-link{
+    text-decoration: none;
+    color: black;
+}
+
+.github-logo{
+    width: 20px;
 }
