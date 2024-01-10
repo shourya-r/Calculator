@@ -180,3 +180,11 @@ modulusButton.addEventListener('click', ()=>{
     currentTerm.textContent = "";
 });
 
+// Adding event listener to the equal to button
+equalToButton.addEventListener("click", ()=>{
+    let operand1 = +previousTerm.textContent.split(" ")[0];
+    let operand2 = +currentTerm.textContent;
+    currentTerm.textContent = operate(previousOperator,operand1, operand2);
+    previousTerm.textContent = "";
+});
+
