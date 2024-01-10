@@ -64,3 +64,27 @@ function operate(operator, num1, num2){
     }
 }
 
+// UI 
+
+// Get references to the various HTML elements 
+const previousTerm = document.querySelector(".previous-term");
+const currentTerm = document.querySelector(".current-term");
+
+const numButtonArray = [...document.querySelectorAll(".num-button")];
+console.log(numButtonArray);
+// Making variables to refer to the individual buttons
+const ONE = numButtonArray[0];
+const TWO = numButtonArray[1];
+const THREE = numButtonArray[2];
+const FOUR = numButtonArray[3];
+const FIVE = numButtonArray[4];
+const SIX = numButtonArray[5];
+const SEVEN = numButtonArray[6];
+const EIGHT = numButtonArray[7];
+const NINE = numButtonArray[8];
+const DECIMAL = numButtonArray[9];
+const ZERO  = numButtonArray[10];
+
+previousTerm.textContent = "8.3324 + ";
+currentTerm.textContent = "23455";
+
