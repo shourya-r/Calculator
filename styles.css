@@ -11,6 +11,13 @@ button{
     border-width: 2px;
     font-size: 20px;
     font-weight: bold;
+    transition: background-color 0.1s;
+}
+button:hover{
+    background-color: #d5d4d4;
+}
+button:active{
+    background-color: #c2bbbb;
 }
 
 .main{
@@ -66,13 +73,31 @@ button{
 .clear-button{
     background-color:#ffaaaa;
 }
+.clear-button:hover{
+    background-color:#fc8c8c;
+}
+.clear-button:active{
+    background-color:#f56d6d;
+}
 
 .delete-button{
     background-color: #aaaaff;
 }
+.delete-button:hover{
+    background-color: #8c8cef;
+}
+.delete-button:active{
+    background-color: #7171ee;
+}
 
 .equals-button{
     background-color: lightgreen;
+}
+.equals-button:hover{
+    background-color: rgb(118, 238, 118);
+}
+.equals-button:active{
+    background-color: rgb(99, 206, 99);
 }
 
 /* FOOTER */
