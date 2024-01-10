@@ -1,7 +1,5 @@
 // Global variables for what will be displayed on calculator display
-let num1; 
-let num2; 
-let operator;
+let previousOperator;
 // Making a function for rounding up the answer of the calculator
 // Rounding upto 6 decimal places
 function roundUp(num){
@@ -102,4 +100,83 @@ deleteButton.addEventListener('click', ()=>{
 // Add an event listener to the clear button
 clearButton.addEventListener('click', ()=>{
     currentTerm.textContent = "";
+    previousTerm.textContent = "";
+    previousOperator = "";
 });
+
+// Operator button event listener
+
+// If previous term is not present then it will take the input and make it the previous term
+// Otherwise it will operate with the previous operator first and make it the previous term
+// Then it will update the previous operator 
+// It will then clear the current term screen
+addButton.addEventListener('click', ()=>{
+    if(previousTerm.textContent ===""){
+        previousTerm.textContent = currentTerm.textContent + " + ";
+        previousOperator = "+";
+    }
+    else{
+        let operand1 = +previousTerm.textContent.split(" ")[0];
+        let operand2 = currentTerm.textContent;
+        previousTerm.textContent = operate(previousOperator,operand1, operand2)+" + ";
+        previousOperator = "+";
+    }
+    currentTerm.textContent = "";
+});
+
+subtractButton.addEventListener('click', ()=>{
+    if(previousTerm.textContent ===""){
+        previousTerm.textContent = currentTerm.textContent + " - ";
+        previousOperator = "-";
+    }
+    else{
+        let operand1 = +previousTerm.textContent.split(" ")[0];
+        let operand2 = +currentTerm.textContent;
+        previousTerm.textContent = operate(previousOperator,operand1, operand2)+" - ";
+        previousOperator = "-";
+    }
+    currentTerm.textContent = "";
+});
+
+multiplyButton.addEventListener('click', ()=>{
+    if(previousTerm.textContent ===""){
+        previousTerm.textContent = currentTerm.textContent + " x ";
+        previousOperator = "*";
+    }
+    else{
+        let operand1 = +previousTerm.textContent.split(" ")[0];
+        let operand2 = +currentTerm.textContent;
+        previousTerm.textContent = operate(previousOperator,operand1, operand2)+" x ";
+        previousOperator = "*";
+    }
+    currentTerm.textContent = "";
+});
+
+divideButton.addEventListener('click', ()=>{
+    if(previousTerm.textContent ===""){
+        previousTerm.textContent = currentTerm.textContent + " / ";
+        previousOperator = "/";
+    }
+    else{
+        let operand1 = +previousTerm.textContent.split(" ")[0];
+        let operand2 = +currentTerm.textContent;
+        previousTerm.textContent = operate(previousOperator,operand1, operand2)+" / ";
+        previousOperator = "/";
+    }
+    currentTerm.textContent = "";
+});
+
+modulusButton.addEventListener('click', ()=>{
+    if(previousTerm.textContent ===""){
+        previousTerm.textContent = currentTerm.textContent + " % ";
+        previousOperator = "%";
+    }
+    else{
+        let operand1 = +previousTerm.textContent.split(" ")[0];
+        let operand2 = +currentTerm.textContent;
+        previousTerm.textContent = operate(previousOperator,operand1, operand2)+" % ";
+        previousOperator = "%";
+    }
+    currentTerm.textContent = "";
+});
+
