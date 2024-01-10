@@ -36,6 +36,9 @@ function multiply(a,b){
 }
 
 function divide(a,b){
+    if(b===0){
+        return NaN;
+    }
     let quotient = a/b;
     quotient = roundUp(quotient);
     return quotient;
@@ -66,6 +69,10 @@ function removeLastLetter(string){
     return string.slice(0,string.length-1);
 }
 
+function checkIfDecimalPresent(num){
+    return Math.floor(num) !== num;
+}
+
 // UI 
 
 // Get references to the various HTML elements 
@@ -74,6 +81,8 @@ const currentTerm = document.querySelector(".current-term");
 
 const numButtonArray = [...document.querySelectorAll(".num-button")];
 console.log(numButtonArray);
+
+const decimalButton = document.querySelector(".decimal-button");
 
 // Getting references to the operator buttons
 const addButton = document.querySelector(".add-button");
@@ -90,6 +99,13 @@ numButtonArray.forEach(numButton =>{
     numButton.addEventListener('click', ()=>{
         currentTerm.textContent += numButton.textContent;
     });
+});
+
+// Adding event listener to decimal button
+decimalButton.addEventListener("click", () => {
+    if(!checkIfDecimalPresent(+currentTerm.textContent)){
+        currentTerm.textContent += ".";
+    }
 });
 
 // Add an event listener to the delete button to remove the last digit 
