@@ -64,6 +64,10 @@ function operate(operator, num1, num2){
     }
 }
 
+function removeLastLetter(string){
+    return string.slice(0,string.length-1);
+}
+
 // UI 
 
 // Get references to the various HTML elements 
@@ -93,7 +97,7 @@ const divideButton = document.querySelector(".divide-button");
 const modulusButton = document.querySelector(".modulus-button");
 const equalToButton = document.querySelector(".equals-button");
 const clearButton = document.querySelector(".clear-button");
-const deleteButton = document.querySelector(".deleteButton");
+const deleteButton = document.querySelector(".delete-button");
 
 // Adding event listeners to the number buttons to type out the number
 numButtonArray.forEach(numButton =>{
@@ -102,4 +106,10 @@ numButtonArray.forEach(numButton =>{
     });
 });
 
-
+// Add an event listener to the delete button to remove the last digit 
+deleteButton.addEventListener('click', ()=>{
+/*     let num = currentTerm.textContent;
+    num = removeLastLetter(num);
+    currentTerm.textContent = num; */
+    currentTerm.textContent = removeLastLetter(currentTerm.textContent);
+});
