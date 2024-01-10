@@ -108,8 +108,5 @@ numButtonArray.forEach(numButton =>{
 
 // Add an event listener to the delete button to remove the last digit 
 deleteButton.addEventListener('click', ()=>{
-/*     let num = currentTerm.textContent;
-    num = removeLastLetter(num);
-    currentTerm.textContent = num; */
     currentTerm.textContent = removeLastLetter(currentTerm.textContent);
 });
