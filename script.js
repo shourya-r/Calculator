@@ -85,4 +85,21 @@ const NINE = numButtonArray[8];
 const DECIMAL = numButtonArray[9];
 const ZERO  = numButtonArray[10];
 
+// Getting references to the operator buttons
+const addButton = document.querySelector(".add-button");
+const subtractButton = document.querySelector(".subtract-button");
+const multiplyButton = document.querySelector(".multiply-button");
+const divideButton = document.querySelector(".divide-button");
+const modulusButton = document.querySelector(".modulus-button");
+const equalToButton = document.querySelector(".equals-button");
+const clearButton = document.querySelector(".clear-button");
+const deleteButton = document.querySelector(".deleteButton");
+
+// Adding event listeners to the number buttons to type out the number
+numButtonArray.forEach(numButton =>{
+    numButton.addEventListener('click', ()=>{
+        currentTerm.textContent += numButton.textContent;
+    });
+});
+
 
