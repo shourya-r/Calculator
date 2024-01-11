@@ -1,5 +1,6 @@
 // Global variables for what will be displayed on calculator display
 let previousOperator;
+let decimalCount = 0;
 // Making a function for rounding up the answer of the calculator
 // Rounding upto 6 decimal places
 function roundUp(num){
@@ -66,11 +67,10 @@ function operate(operator, num1, num2){
 }
 
 function removeLastLetter(string){
+    if(string.slice(string.length-1)==="."){
+        decimalCount--;
+    }
     return string.slice(0,string.length-1);
-}
-
-function checkIfDecimalPresent(num){
-    return Math.floor(num) !== num;
 }
 
 // UI 
@@ -103,8 +103,9 @@ numButtonArray.forEach(numButton =>{
 
 // Adding event listener to decimal button
 decimalButton.addEventListener("click", () => {
-    if(!checkIfDecimalPresent(+currentTerm.textContent)){
-        currentTerm.textContent += ".";
+    if(decimalCount===0){
+       currentTerm.textContent += "."; 
+       decimalCount++;
     }
 });
 
